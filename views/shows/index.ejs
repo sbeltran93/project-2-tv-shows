@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+  <title>TV Show's Index</title>
+</head>
+<body>
+  <a href="/shows/new">Add TV Show</a>
+  <h1>All TV Shows</h1>
+  <ul>
+    <% shows.forEach((show) => { %>
+      <li>
+        <a href="/shows/<%=show._id%>">
+         Look at all added TV Shows by <%= show.title %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

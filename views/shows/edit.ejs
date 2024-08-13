@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+  <title>Edit a Tv Show</title>
+</head>
+<body>
+  <h1>Edit a TV Show!</h1>
+  <form action="/shows/<%= show._id%>?_method=PUT" method="POST">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" value="<%= show.email %>"/>
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" value="<%= show.title %>" />
+    <label for="name">Rating:</label>
+    <input type="number" name="number" id="number" value="<%= show.rating %>" />
+    <button type="submit">Update TV Show</button>
+  </form>
+  <a href="/shows/<%= show._id %>">Take you to <%= show.title %>'s Page</a>
+</body>
+</html>
